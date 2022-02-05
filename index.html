@@ -13,55 +13,71 @@
 </head>
 
 <body>
-  <div class="container">
+  <div id="top" class="container">
     <div class="site-header">
+      <ul class="skiplinks">
+        <li><a href="#nav">Go to Menu</a>
+        </li>
+        <li><a href="#main">Go to Main Content</a>
+        </li>
+        <li><a href="#contact">Go to Contact Form</a>
+        </li>
+      </ul>
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <nav role="navigation" id="nav" class="main-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#" aria-label="Go to Home Page">Home</a></li>
+          <li><a href="#" aria-label="Go to Products">Products</a></li>
+          <li><a href="#" aria-label="Go to Reservation">Reservation</a></li>
+          <li><a href="#" aria-label="Go to Studio">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      </nav>
+      <img role="banner" src="https://placekitten.com/1200/900" class="banner" aria-details="catinfo">
+        <div id="catinfo">
+          <h2>Cute Kitten</h2>
+          <p>A tiny kitten is lying on its back on a wooden floor. The kitten is predominantly gray with lighter spots. His paws have pink polka dots and his face shows contentment.</p>
+        </div>
     </div>
-    <div class="main-content">
+    <main role="main" id="main" class="main-content">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
         <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="job title">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="phonenumber">Phone: 613-000-0000</li>
         </ul>
         <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="name"> Jambox Studios</span>
+          <span itemprop="streetAddress"></span>123 Guitar Road,</span>
+          <span itemprop="addressLocality"> Musicville, Danceistan</span>
+          <span itemprop="postalcode"></span>B3T 0L0</span>
         </p>
       </div>
-      <div class="contact-section">
+      <div id="contact" class="contact-section">
         <h1>Contact Us</h1>
-        <form action="thanks.html">
+        <form role="form" action="thanks.html">
           <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
+          <input type="name" placeholder="Full Name">
+          <label>Email</label>
+          <input type="email" placeholder="Email">
+          <label>Subject</label>
           <input type="text" placeholder="Subject">
           <b>Your Message</b>
           <textarea></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" aria-label="Send your message">Send</button>
         </form>
       </div>
-    </div>
-    <div class="site-footer">
+    </main>
+    <footer role="contentinfo" class="site-footer">
       &copy; 2021 Jam Box Studios
-    </div>
+      <a href="#top">Back to Top</a>
+    </footer>
+    
   </div>
 </body>
 
